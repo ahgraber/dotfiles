@@ -26,11 +26,12 @@ export PATH=$gembin:$PATH
 * Install colorls  
   * Install colorls: ```gem install colorls```  
   * Check https://github.com/athityakumar/colorls#flags for flags/combinations for ls aliases
-  * Set font to 'Hack Regular Nerd Font Complete'  
+  * Set font to 'Hack Regular Nerd Font Complete' or 'MesloLGF NS' 
   OR  
-  (if using iTerm2), use whatever you want for Font and set Non-ASCII Font to 'Hack Regular Nerd Font Complete' or 'FontAwesome'
+  (if using iTerm2), use whatever you want for Font and set Non-ASCII Font to 'Hack Regular Nerd Font Complete' or 'MesloLGF NS'
 * Install oh-my-zsh: ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"```
 * Install powerlevel10k: ```git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k```
+  * run ```p10k configure```
   * Set oh-my-zsh theme to ```ZSH_THEME="powerlevel10k/powerlevel10k"``` (see (dot)zshrc)  
   * Set oh-my-zsh powerlevel mode to ```POWERLEVEL9K_MODE='nerdfont-complete'```
   
