@@ -15,30 +15,14 @@
   * Set system to use homebrew zsh: ```sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh```  
 #### Additional Customization  
 * Install fonts:  
-  
+* Install homebrew Ruby: ```brew vendor-install ruby```  
+* Add gem bin to path (add to ~/.zshrc): 
+```
+gembin=`(gem env | sed -n "s/.*EXECUTABLE DIRECTORY: \(.*\)/\1/p")`
+export PATH=$gembin:$PATH
+```
 * Install colorls  
-  * Install rvm:
-    ```
-    # Install gpg
-    brew install gnupg2  
-    
-    # Get keys to validate RVM
-    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-    
-    # Get RVM
-    \curl -sSL https://get.rvm.io | bash
-    source ~/.rvm/scripts/rvm
-    
-    mkdir -p ~/.rvm/src && cd ~/.rvm/src && rm -rf ./rvm && \
-    git clone --depth 1 git://github.com/rvm/rvm.git && \
-    cd rvm && ./install
-  
-    # Install latest Ruby
-    rvm install ruby --latest
-    # or Install with homebrew: 
-    brew vendor-install ruby
-    ```  
-  * Install colorls (finally)```gem install colorls```  
+  * Install colorls: ```gem install colorls```  
   * Check https://github.com/athityakumar/colorls#flags for flags/combinations for ls aliases
 * Install oh-my-zsh: ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"```
 * Install powerlevel10k: ```git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k```
