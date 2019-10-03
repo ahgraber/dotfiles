@@ -15,6 +15,8 @@
   * Set system to use homebrew zsh: ```sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh```  
 #### Additional Customization  
 * Install fonts:  
+  * Install Awesome Fonts: https://github.com/gabrielelana/awesome-terminal-fonts
+  * Install Hack from Nerd Font: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack
 * Install homebrew Ruby: ```brew vendor-install ruby```  
 * Add gem bin to path (add to ~/.zshrc): 
 ```
