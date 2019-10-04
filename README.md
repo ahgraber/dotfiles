@@ -31,6 +31,7 @@ export PATH=$gembin:$PATH
   (if using iTerm2), use whatever you want for Font and set Non-ASCII Font to 'Hack Regular Nerd Font Complete' or 'MesloLGF NS'
 * Install zsh-syntax_highlighting: ```git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting``` and add to plugins list
 * Install zsh-completions: ```git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions``` and add to plugins list
+* Install zsh-autosuggestions: ```git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions``` and add to plugins list
 * Install oh-my-zsh: ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"```
 * Install powerlevel10k: ```git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k```
   * run ```p10k configure```
@@ -75,6 +76,7 @@ export PATH=$gembin:$PATH
   * Set font to 'Hack Regular Nerd Font Complete' or 'MesloLGF NS' 
 * Install zsh-syntax_highlighting: ```git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting``` and add to plugins list
 * Install zsh-completions: ```git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions``` and add to plugins list
+* Install zsh-autosuggestions: ```git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions``` and add to plugins list
 * Install oh-my-zsh: ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"```
 * Install powerlevel10k: ```git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k```
   * run ```p10k configure```
