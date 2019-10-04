@@ -58,26 +58,10 @@ export PATH=$gembin:$PATH
   * Install Hack from Nerd Font: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack
 * Install Ruby (using rbenv https://gorails.com/setup/windows/10#ruby-source)
   ```
-  cd
-  git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-  echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-  exec $SHELL
-  
-  git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-  echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-  exec $SHELL
-  
-  rbenv install 2.6.5 # or whatever latest is
-  rbenv global 2.6.5
-  ruby -v
+  sudo apt install rbenv
+  sudo apt install ruby-dev
   ```
-* You may have to change the permissions for the .rbenv file: ```sudo chmod -R go-w /home/$USER/```
-* Add ruby and gem bin to path (add to ~/.zshrc): 
-  ```
-  gembin=`(gem env | sed -n "s/.*EXECUTABLE DIRECTORY: \(.*\)/\1/p")`
-  export PATH=$gembin:$PATH
-  ```
+* You may have to change the permissions: ```compaudit | xargs chmod g-w,o-w /home/$USER/.oh-my-zsh/```
 * Install colorls  
   * Install colorls: ```gem install colorls```  
   * Check https://github.com/athityakumar/colorls#flags for flags/combinations for ls aliases
@@ -90,3 +74,4 @@ export PATH=$gembin:$PATH
   * run ```p10k configure```
   * Set oh-my-zsh theme to ```ZSH_THEME="powerlevel10k/powerlevel10k"``` (see (dot)zshrc)  
   * Set oh-my-zsh powerlevel mode to ```POWERLEVEL9K_MODE='nerdfont-complete'```
+* Pull what is needed from dotfiles to update .zshrc, .bashrc, .aliases
