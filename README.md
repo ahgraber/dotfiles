@@ -62,6 +62,7 @@ export PATH=$gembin:$PATH
   rbenv global 2.6.5
   ruby -v
   ```
+* You may have to change the permissions for the .rbenv file: ```sudo chmod go-w /home/agraber/.rbenv/plugins```
 * Add ruby and gem bin to path (add to ~/.zshrc): 
   ```
   gembin=`(gem env | sed -n "s/.*EXECUTABLE DIRECTORY: \(.*\)/\1/p")`
