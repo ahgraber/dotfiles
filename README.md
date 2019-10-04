@@ -38,12 +38,20 @@ export PATH=$gembin:$PATH
   * Set oh-my-zsh theme to ```ZSH_THEME="powerlevel10k/powerlevel10k"``` (see (dot)zshrc)  
   * Set oh-my-zsh powerlevel mode to ```POWERLEVEL9K_MODE='nerdfont-complete'```
   
-#### Windows [WSL] (using hyper)
+### Windows [WSL] (using hyper)
 #### Prerequisites  
 * Install hyper: https://hyper.is/  
 * Install VSCode: https://code.visualstudio.com/  
 * Install Windows Subsystem for Linux (see any guide) -- side note: everything following happens in WSL
   * Add ```code``` to command line: https://code.visualstudio.com/docs/remote/wsl  
+* Install zsh: ```sudo apt install zsh```
+  * Set to use zsh as default shell: ```code ~/.bashrc```
+    In .bashrc, add
+    ```
+    if [ -t 1 ]; then
+      exec zsh
+    fi
+    ```
 #### Additional Customization  
 * Install fonts:  
   * Install Awesome Fonts: https://github.com/gabrielelana/awesome-terminal-fonts
