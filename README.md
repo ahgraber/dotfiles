@@ -11,18 +11,14 @@
     1. Launch VS Code.  
     2. Open the Command Palette (⇧⌘P) and type ```shell command``` to find the Shell Command: ```Install 'code' command in PATH command.```  
 * Install homebrew: https://brew.sh/ ```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"``` and add to path
-  * Install zsh: ```brew install zsh```  
+  * Install zsh (unnecessary in Catalina): ```brew install zsh```  
   * Set system to use homebrew zsh: ```sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh```  
 #### Additional Customization  
 * Install fonts:  
   * Install Awesome Fonts: https://github.com/gabrielelana/awesome-terminal-fonts
   * Install Hack from Nerd Font: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack
-* Install homebrew Ruby: ```brew vendor-install ruby``` and add to path  
-* Add gem bin to path (add to ~/.zshrc): 
-```
-gembin=`(gem env | sed -n "s/.*EXECUTABLE DIRECTORY: \(.*\)/\1/p")`
-export PATH=$gembin:$PATH
-```
+* Install homebrew Ruby: ```brew install ruby``` and add to path (see (dot)zshrc)
+* Install iStats: ```gem install iStats```
 * Install colorls  
   * Install colorls: ```gem install colorls```  
   * Check https://github.com/athityakumar/colorls#flags for flags/combinations for ls aliases
