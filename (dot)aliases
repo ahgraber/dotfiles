@@ -6,6 +6,7 @@ alias aliasconfig="code ~/.aliases"
 alias zshconfig="code ~/.zshrc"
 alias bashconfig="code ~/.bash_profile" 
 alias p10kconfig="code ~/.p10k.zsh"
+alias zprezto_update="cd $$ZPREZTODIR && git pull && git submodule update --init --recursive"
 
 alias clr="clear"
 
