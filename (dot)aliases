@@ -1,12 +1,11 @@
+#######################################
 ### Aliases for bash and zsh
-
+#######################################
 
 alias aliasconfig="code ~/.aliases"
 alias zshconfig="code ~/.zshrc"
 alias bashconfig="code ~/.bash_profile" 
 alias p10kconfig="code ~/.p10k.zsh"
-alias codeconfig="code ~/Library/Application\ Support/Code/User/settings.json"
-alias -s {py,pyc,ipynb,yml,yaml}=code
 
 alias clr="clear"
 
@@ -16,10 +15,16 @@ alias la="colorls -A --sd"
 alias ll="colorls -lA --sd"
 alias lt="colorls -A --tree=3"
 
-alias viewHidden="defaults write com.apple.finder AppleShowAllFiles -bool true | killall Finder"
-alias showHidden="defaults write com.apple.finder AppleShowAllFiles -bool true | killall Finder"
-alias hideHidden="defaults write com.apple.finder AppleShowAllFiles -bool false | killall Finder"
+#######################################
+### Identity
+#######################################
 
+alias copyssh="pbcopy < ~/.ssh/ahg_ninerealmlabs_id_rsa.pub"
+alias sendssh="ssh ssh-copy-id -i ~/.ssh/ahg_ninerealmlabs_id_rsa.pub"
+
+#######################################
+### networking
+#######################################
 alias flush="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias renew="sudo ipconfig set en0 BOOTP && sudo ipconfig set en0 DHCP"
 alias ping="ping -c 3"
@@ -27,16 +32,23 @@ alias whatismyip='curl ifconfig.co'
 alias externalip='curl ifconfig.co'
 alias amimullvad='curl https://am.i.mullvad.net/json'
 
-alias sleepless="pmset -g assertions | egrep '(PreventUserIdleSystemSleep|PreventUserIdleDisplaySleep)'"
-
-
-
+#######################################
 ###    Python
+#######################################
 # python virtualenv
 alias ml="conda ml activate"
 
 # to run jupyter notebook
 alias jupyter="jupyter notebook"
 
-# to run ipopt solver
-alias ipopt="/Users/mithras/Ipopt/build/bin/ipopt"
+#######################################
+### mac only
+#######################################
+alias viewHidden="defaults write com.apple.finder AppleShowAllFiles -bool true | killall Finder"
+alias showHidden="defaults write com.apple.finder AppleShowAllFiles -bool true | killall Finder"
+alias hideHidden="defaults write com.apple.finder AppleShowAllFiles -bool false | killall Finder"
+
+alias sleepless="pmset -g assertions | egrep '(PreventUserIdleSystemSleep|PreventUserIdleDisplaySleep)'"
+
+alias codeconfig="code ~/Library/Application\ Support/Code/User/settings.json"
+alias -s {py,pyc,ipynb,yml,yaml}=code
