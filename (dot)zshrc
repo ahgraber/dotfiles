@@ -1,20 +1,25 @@
+###########################################################
+###                 PATH configuration                  
+###########################################################
 # Standard PATH:
 # export PATH="/usr/bin:/bin:/usr/sbin:/usr/local/bin"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Add Homebrew's executable directory to the front of the PATH
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
-
 # Add Ruby to path
-if [ -d "/usr/local/opt/ruby/bin" ]; then
-    export PATH=/usr/local/opt/ruby/bin:$PATH
-    export PATH=`gem environment gemdir`/bin:$PATH
-    # export LDFLAGS="-L/usr/local/opt/ruby/lib"
-    # export CPPFLAGS="-I/usr/local/opt/ruby/include"
-fi
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+export PATH=`gem environment gemdir`/bin:$PATH
+
+# Ruby for Mac
+# if [ -d "/usr/local/opt/ruby/bin" ]; then
+#     export PATH=/usr/local/opt/ruby/bin:$PATH
+#     export PATH=`gem environment gemdir`/bin:$PATH
+#     # export LDFLAGS="-L/usr/local/opt/ruby/lib"
+#     # export CPPFLAGS="-I/usr/local/opt/ruby/include"
+# fi
 
 # Homebrew packages
 # export PATH="/usr/local/opt/gcc/bin:$PATH"
@@ -24,9 +29,9 @@ fi
 # export PATH="/usr/local/opt/sqlite/bin:$PATH"
 # export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
-#BigARTM flags
-ARTM_SHARED_LIBRARY=/usr/local/lib/libartm.dylib
-
+###########################################################
+###                 Shell configuration                  
+###########################################################
 # Set up autocomplete
 autoload -U compinit && compinit
 source $(dirname $(gem which colorls))/tab_complete.sh
@@ -46,29 +51,9 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#########################################
-###        Conda configuration        ###
-#########################################
-#  added by Miniconda3 4.7.10 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/agraber/miniconda3/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
-else
-    if [ -f "/Users/agraber/miniconda3/etc/profile.d/conda.sh" ]; then
-# . "/Users/agraber/miniconda3/etc/profile.d/conda.sh"  # commented out by conda initialize
-        CONDA_CHANGEPS1=false conda activate base
-    else
-        \export PATH="/Users/agraber/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda init <<<
-
 
 ###########################################################
-###                 User configuration                  ###
+###                 User configuration                  
 ###########################################################
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
